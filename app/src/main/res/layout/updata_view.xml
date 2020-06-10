@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/broadcast_bg"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/broadcast_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="发现新版本"
+            android:textColor="@color/green_back"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/green_back"></LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/broadcast_title"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="最新版本："
+                    android:textColor="#333"/>
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView33"
+                    android:layout_toEndOf="@+id/textView33"
+                    android:layout_toRightOf="@+id/textView33"
+                    android:text="1.0.1"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#333" />
+
+
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新内容："
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#333"
+                    android:layout_below="@+id/textView33"
+                    android:layout_toLeftOf="@+id/number"
+                    android:layout_toStartOf="@+id/number" />
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView47"
+                    android:layout_alignStart="@+id/textView47"
+                    android:layout_below="@+id/textView47"
+                    android:text="1、全新升级\n2、全新改版\n3、贴心\n"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#333" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/up_now"
+                android:focusableInTouchMode="false"
+                android:text="立即升级"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/later"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/up_later"
+                android:focusableInTouchMode="false"
+                android:text="以后再说"
+                android:textColor="#70000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

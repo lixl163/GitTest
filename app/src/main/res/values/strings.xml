@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">测试-果然好</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="back">返回</string>
+
+    <string name="title_login">登录</string>
+    <string name="login_username">用户名</string>
+    <string name="login_password">密码</string>
+    <string name="remeber_pwd">记住密码</string>
+    <string name="auto_login">自动登陆</string>
+
+    <!-- 录音 -->
+    <string name="normal">按住 说话</string>
+    <string name="recording">松开 结束</string>
+    <string name="want_to_cancle">松开手指，取消发送</string>
+    <string name="shouzhishanghua">手指上滑，取消发送</string>
+    <string name="tooshort">录音时间过短</string>
+    <string name="toolong">录音时间过长</string>
+</resources>

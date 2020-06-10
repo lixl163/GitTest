@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/light_gray_6"
+        android:textSize="10sp"
+        android:visibility="gone"/>
+
+    <com.zsinfo.guoranhao.chat.widget.CircleImageView
+        android:id="@+id/iv_other_user_icon"
+        android:layout_width="@dimen/image50"
+        android:layout_height="@dimen/image50"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/chat_time"
+        android:src="@mipmap/default_avatar_friend"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_time"
+        android:layout_margin="5dp"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_toRightOf="@+id/iv_other_user_icon"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_name_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_othername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服001号"/>
+
+            <TextView
+                android:id="@+id/tv_othertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="15:40:07"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/voice_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/receiver"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/id_receiver_recorder_anim"
+                    android:layout_width="@dimen/image25"
+                    android:layout_height="@dimen/image25"
+                    android:layout_gravity="center_vertical|left"
+                    android:background="@mipmap/audio_animation_list_left_3"/>
+
+                <TextView
+                    android:id="@+id/voice_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin8"
+                    android:textColor="@color/middle_gray_1"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/receiver_voice_unread"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin5"
+                android:background="@mipmap/msg_chat_voice_unread"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

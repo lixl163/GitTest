@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="@dimen/bottom_marginTop"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_home"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/homepage_check" />
+
+            <TextView
+                android:layout_below="@+id/iv_home"
+                android:id="@+id/tv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:text="首页"
+                android:textColor="@color/green_back"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_more"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="@dimen/bottom_marginTop"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_more"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/more_good_unchecked" />
+
+            <TextView
+                android:layout_below="@+id/iv_more"
+                android:id="@+id/tv_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:text="更多商品"
+                android:textColor="@color/home_back_unselected"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_buycar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+           <ImageView
+               android:layout_marginTop="@dimen/bottom_marginTop"
+               android:layout_centerHorizontal="true"
+               android:id="@+id/iv_buycar"
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:src="@drawable/buy_car_unchecked" />
+            <TextView
+                android:layout_below="@+id/iv_buycar"
+                android:id="@+id/tv_buycar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:text="购物车"
+                android:textColor="@color/home_back_unselected"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_marginBottom="-13dp"
+                android:layout_marginRight="-8dp"
+                android:layout_alignBaseline="@+id/iv_buycar"
+                android:background="@drawable/bg_shop_car_num"
+                android:layout_toLeftOf="@+id/iv_buycar"
+                android:text="0"
+                android:minWidth="12dp"
+                android:minHeight="12dp"
+                android:padding="1dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_whole_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginTop="@dimen/bottom_marginTop"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_whole_buy"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/whole_buy_unchecked" />
+            <TextView
+                android:layout_below="@+id/iv_whole_buy"
+                android:id="@+id/tv_whole_buy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:text="整件购买"
+                android:textColor="@color/home_back_unselected"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ll_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="@dimen/bottom_marginTop"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_me"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/me_unchecked" />
+
+            <TextView
+                android:layout_below="@+id/iv_me"
+                android:id="@+id/tv_me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="我"
+                android:textColor="@color/home_back_unselected"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

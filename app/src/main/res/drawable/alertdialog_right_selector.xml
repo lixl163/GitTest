@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/alert_btn_right_pressed"
+          android:state_pressed="true">
+    <color android:color="#92bf1f" />
+    </item>
+
+
+    <item android:drawable="@drawable/trans_bg">
+        <color android:color="#92bf1f" />
+        </item>
+</selector>

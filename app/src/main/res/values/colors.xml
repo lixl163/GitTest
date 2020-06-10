@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="orange">#f76a10</color>
+    <color name="orange2">#FFD17033</color>
+
+    <color name="item_selectd">#ffffff</color>
+    <color name="click_bg">#d9d9d9</color>
+    <color name="zz_divider">#e6e6e6</color>
+    <color name="light_gray_2">#f0f2f6</color>
+    <color name="light_gray_6">#aaaaaa</color>
+    <color name="light_gray_21">#a3a8ad</color>
+    <color name="gray_litter">#a4a4a4</color>
+    <color name="middle_gray_1">#999999</color>
+    <color name="dark_gray_1">#051b28</color>
+
+    <color name="touming">#00000000</color>
+    <color name="green_back">#93c01d</color>
+    <color name="green_back1">#E78A17</color>
+    <color name="green_back2">#35AF64</color>
+    <color name="green_back3">#CA8B48</color>
+    <color name="home_back_unselected">#878787</color>
+    <color name="header_gray">#f8f8f8</color>
+    <color name="bg_text_num">#ff7b29</color>
+    <color name="white">#ffffff</color>
+    <color name="trans">#00000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="black">#000000</color>
+    <color name="zz_half_transparent">#7f000000</color>
+
+</resources>

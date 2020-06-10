@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/light_gray_6"
+        android:textSize="10sp"
+        android:visibility="gone"/>
+
+    <com.zsinfo.guoranhao.chat.widget.CircleImageView
+        android:id="@+id/iv_other_user_icon"
+        android:layout_width="@dimen/image50"
+        android:layout_height="@dimen/image50"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/chat_time"
+        android:src="@mipmap/default_avatar_friend"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_time"
+        android:layout_margin="5dp"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_toRightOf="@+id/iv_other_user_icon"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_name_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_othername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服001号"/>
+
+            <TextView
+                android:id="@+id/tv_othertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="15:40:07"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/img_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.zsinfo.guoranhao.chat.widget.BubbleImageView
+                android:id="@+id/image_message"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/example"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

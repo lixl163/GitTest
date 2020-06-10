@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_tongbao_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/chat_swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:layout_weight="1">
+            <ListView
+                android:id="@+id/chat_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transcriptMode="normal"
+                android:listSelector="@android:color/transparent"
+                android:divider="@null"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_container_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/frame_bg"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    android:layout_width="@dimen/image45"
+                    android:layout_height="@dimen/image45"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@mipmap/chatting_setmode_voice_btn_normal"
+                    android:padding="4dp"/>
+
+                <EditText
+                    android:id="@+id/et_message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_normal"
+                    android:maxHeight="@dimen/margin80"
+                    android:minHeight="@dimen/margin40"
+                    android:paddingBottom="@dimen/margin5"
+                    android:textSize="16sp"/>
+
+                <com.zsinfo.guoranhao.chat.widget.AudioRecordButton
+                    android:id="@+id/voice_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_recordnormal"
+                    android:gravity="center"
+                    android:minHeight="0dp"
+                    android:padding="5dp"
+                    android:text="@string/normal"
+                    android:textColor="#727272"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_emoji"
+                    android:layout_width="@dimen/image30"
+                    android:layout_height="@dimen/image30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/emoji"
+                    android:padding="4dp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/btn_take_picture"
+                    android:layout_width="@dimen/image45"
+                    android:layout_height="@dimen/image45"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/chat_take_picture"
+                    android:clickable="true"
+                    android:padding="4dp"/>
+
+                <!-- 首先设定TextView的clickable属性为true。 -->
+                <TextView
+                    android:id="@+id/send_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:background="@drawable/frame_orange_to_thin_bg"
+                    android:clickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="发送"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- 表情布局-->
+            <LinearLayout
+                android:id="@+id/emoji_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/light_gray_2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@color/light_gray_2"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:src="@mipmap/emoji"/>
+
+                    <TextView
+                        android:id="@+id/send_emoji_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/frame_orange_to_thin_bg"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="发送"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 图片功能 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zsinfo.guoranhao.chat.widget.ChatBottomView
+                    android:id="@+id/cbv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading_view"/>
+</RelativeLayout>

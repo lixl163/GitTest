@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/header_gray"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/black_jiantou"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        tools:text="test"
+        android:textColor="@color/black"
+        android:textSize="@dimen/header_textSize"/>
+
+    <LinearLayout
+        android:id="@+id/ll_box"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:gravity="center"
+            tools:text="充值记录"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/title_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bg_btn_dis"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
